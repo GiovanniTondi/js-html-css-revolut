@@ -15,7 +15,9 @@ body {
 }
 
 .container {
-    padding: 0 15%;
+    padding: 0 calc(1% + 100px);
+    margin: 0 auto;
+    max-width: 1480px;
 }
 
 a {
@@ -31,6 +33,7 @@ a:hover {
 .btn {
     display: inline-block;
     padding: 15px;
+    font-weight: bold;
     color: #fff;
     border-radius: 10px;
     background-color: #000;
@@ -85,7 +88,7 @@ a:hover {
 }
 
 .parent-dropdown > a {
-    padding: 15px;
+    padding: 20px;
 }
 
 .dropdown {
@@ -94,9 +97,11 @@ a:hover {
     padding: 20px 0;
     top: 30px;
     left: -20px;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 10px;
     /* box-shadow: 1px 7px 15px #ccc; */
     box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+    z-index: 9;
 }
 
 .dropdown-menu {
@@ -116,7 +121,7 @@ a:hover {
 .dropdown-menu .disabled {
     color: rgb(139, 149, 158);
     font-size: 14px;
-    padding: 15px 35px;    
+    padding: 15px 35px;
 }
 
 .dropdown-menu sup {
@@ -127,8 +132,11 @@ a:hover {
 
 /* header */
 header {
-    height: 70px;
     background-color: #f3f4f5;
+}
+
+header > div {
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,4 +158,87 @@ main .logo {
     position: relative;
     top: -9px;
     margin-right: 70px;
+}
+
+.jumbo {
+    display: flex;
+    margin-top: 70px;
+    width: 100%;
+}
+
+.jumbo img {
+    margin-left: 12%;
+    max-height: 600px;
+}
+
+.jumbo .landing {
+    width: 40%;
+}
+
+.jumbo .landing h1 {
+    margin-top: 50px;
+    font-size: 76px;
+}
+
+.jumbo .landing p {
+    margin-top: 30px;
+    color: #8c8897;
+    line-height: 1.7em;
+}
+
+.jumbo .landing .form {
+    margin-top: 30px;
+}
+
+.jumbo .landing .form .btn {
+    margin-left: 20px;
+    padding: 15px 40px;
+}
+
+#prefisso, #cellulare {
+    padding: 5px;
+    height: 30px;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+}
+
+#prefisso {
+    width: 50px;
+}
+
+#cellulare {
+    width: 180px;
+}
+
+.landing .landing-footer {
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.landing .landing-footer span {
+    margin-left: 15px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* MEDIA QUERY */
+@media all and (max-width: 1500px) {
+    .container {
+        padding: 0 calc(1% + 50px);
+    }
+}
+
+@media all and (max-width: 1080px) {
+
 }
