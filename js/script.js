@@ -37,11 +37,11 @@ $(document).ready(function () {
     $('.hamburger').click(function () {
         $('.hamburger').toggleClass('hidden-xs');
         $('main').hide();
-        
+
         // Apparire
         $('.menu-xs').toggleClass('active');
         $('header').toggleClass('hidden-xs');
-        $('header .inline-menu.left').toggleClass('hidden-xs');
+        // $('header .inline-menu.left').toggleClass('hidden-xs');
 
         $('.parent-dropdown').toggleClass('hidden-xs');
     });

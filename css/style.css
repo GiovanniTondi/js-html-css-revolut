@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    padding: 0 calc(1% + 100px);
+    padding: 0 calc(1% + 70px);
     margin: 0 auto;
     max-width: 1480px;
 }
@@ -69,13 +69,13 @@ a:hover {
     color: #222;
 }
 
-.inline-menu .btn {
-    position: relative;
-    top: -10px;
+.inline-menu.appDownload {
+    margin-left: auto;
 }
 
 .hamburger {
     display: none;
+    margin-left: auto;
     position: relative;
     top: -10px;
     font-size: 22px;
@@ -160,14 +160,12 @@ main {
 
 main nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     height: 70px;
 }
 
 main .logo {
-    position: relative;
-    top: -9px;
     margin-right: 70px;
 }
 
@@ -266,9 +264,9 @@ input[type=number] {
 
 
 /* MEDIA QUERY */
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1540px) {
     .container {
-        padding: 0 calc(1% + 50px);
+        /* padding: 0 calc(1% + 50px); */
     }
 }
 
