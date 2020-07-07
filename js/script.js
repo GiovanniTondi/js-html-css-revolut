@@ -14,23 +14,24 @@ $(document).ready(function () {
         }
     });
 
-    $('.parent-dropdown').click(function () {
+    $('.parent-dropdown > a').click(function () {
 
         if ($('.inline-menu.active').css('flex-direction') == 'column') {
-            $('.parent-dropdown').children('div').slideUp();
-            $('.parent-dropdown .fas').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            $('.parent-dropdown > a').next('div').slideUp();
+            $('.parent-dropdown .fas').removeClass('rotate180');
 
             if ($(this).hasClass('active')) {
-                $('.parent-dropdown').removeClass('active');
-                $(this).children('div').slideUp();
+                $('.parent-dropdown a').removeClass('active');
+                $(this).next('div').slideUp();
             } else {
-                $('.parent-dropdown').removeClass('active');
+                $('.parent-dropdown a').removeClass('active');
                 $(this).addClass('active')
-                $(this).children('div').slideDown();
-                $('.parent-dropdown.active .fas').toggleClass('fa-chevron-down fa-chevron-up');
+                $(this).next('div').slideDown();
+                $('.parent-dropdown a.active .fas').toggleClass('rotate180');
             }
         }
     });
+
 
 
     $('.hamburger').click(function () {

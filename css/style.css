@@ -23,7 +23,7 @@ body {
 a {
     text-decoration: none;
     color: #8c8897;
-    transition: .3s;
+    transition: color .3s;
 }
 
 a:hover {
@@ -36,13 +36,13 @@ a:hover {
     font-weight: bold;
     color: #fff;
     border-radius: 10px;
-    background-color: #000;
+    background-color: #191c1f;
     transition: .3s;
 }
 
 .btn:hover {
     color: #fff;
-    background-color: #2a2a2a;
+    background-color: rgba(25, 28, 31, 0.84);
 }
 
 /* generali menu */
@@ -50,12 +50,6 @@ a:hover {
     display: flex;
     list-style: none;
 }
-
-/* .inline-menu::after {
-    content: "";
-    display: table;
-    clear: both;
-} */
 
 .inline-menu > li {
     margin-right: 30px;
@@ -105,6 +99,10 @@ a:hover {
 
 .parent-dropdown > a {
     padding: 20px;
+}
+
+.parent-dropdown .fa-chevron-down {
+    display: none;
 }
 
 .dropdown {
@@ -165,7 +163,6 @@ main {
 
 main nav {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     height: 70px;
 }
@@ -307,7 +304,6 @@ input[type=number] {
         text-align: center;
         margin-top: 0;
         margin-bottom: 200px;
-        /* overflow: hidden; */
     }
 
     .jumbo .landing {
@@ -340,10 +336,6 @@ input[type=number] {
         z-index: 98;
     }
 
-    .inline-menu.active .parent-dropdown {
-        /* padding-left: 20px; */
-    }
-
     .inline-menu.active .parent-dropdown a {
         display: flex;
         justify-content: space-between;
@@ -364,11 +356,22 @@ input[type=number] {
         box-shadow: none;
     }
 
+    .inline-menu.active .dropdown li.disabled {
+        padding: 20px calc(1% + 45px);
+    }
+
     .inline-menu.active .dropdown a {
         font-size: 16px;
     }
 
+    .parent-dropdown .fa-chevron-down {
+        display: block;
+        transition: all .4s linear 0s;
+    }
 
+    .rotate180 {
+        transform: rotate(180deg);
+    }
 
     .hidden-xs {
         display: none;
