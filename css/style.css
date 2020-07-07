@@ -47,17 +47,17 @@ a:hover {
 
 /* generali menu */
 .inline-menu {
+    display: flex;
     list-style: none;
 }
 
-.inline-menu::after {
+/* .inline-menu::after {
     content: "";
     display: table;
     clear: both;
-}
+} */
 
 .inline-menu > li {
-    float: left;
     margin-right: 30px;
 }
 
@@ -69,16 +69,21 @@ a:hover {
     color: #222;
 }
 
-.inline-menu.appDownload {
+.appDownload {
     margin-left: auto;
 }
 
 .hamburger {
     display: none;
     margin-left: auto;
-    position: relative;
-    top: -10px;
+    position: absolute;
+    top: 32px;
+    right: 50px;
     font-size: 22px;
+}
+
+.hamburger .fa-times {
+    font-size: 28px;
 }
 
 .menu-xs {
@@ -237,7 +242,7 @@ footer {
 
 footer h2 {
     font-size: 32px;
-    margin: 20px 0 100px;
+    margin-top: 10px;
 }
 
 footer .appDownload {
@@ -264,21 +269,14 @@ input[type=number] {
 
 
 /* MEDIA QUERY */
-@media all and (max-width: 1540px) {
-    .container {
-        /* padding: 0 calc(1% + 50px); */
-    }
-}
-
 @media all and (max-width: 1080px) {
     .hamburger,
     footer {
         display: block;
     }
 
-
-    main .inline-menu .parent-dropdown,
-    .inline-menu.appDownload,
+    /* main .inline-menu .parent-dropdown, */
+    nav .appDownload,
     .jumbo .landing .form,
     .jumbo .landing .landing-footer {
         display: none;
@@ -304,7 +302,7 @@ input[type=number] {
         text-align: center;
         margin-top: 0;
         margin-bottom: 200px;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     .jumbo .landing {
@@ -366,6 +364,47 @@ input[type=number] {
     .menu-xs .dropdown a {
         font-size: 16px;
     }
+
+    /* test */
+    nav .inline-menu.active {
+        flex-direction: column;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 100px;
+        width: 100%;
+        height: calc(100vh - 300px);
+        background-color: #fff;
+        overflow: hidden;
+        z-index: 98;
+    }
+
+    .inline-menu.active .parent-dropdown {
+        margin-left: 60px;
+    }
+
+    .inline-menu.active .parent-dropdown a {
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .inline-menu.active .dropdown {
+        display: none;
+        position: relative;
+        top: -21px;
+        left: -7px;
+        padding: 20px 0;
+        background-color: #fff;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .inline-menu.active .dropdown a {
+        font-size: 16px;
+    }
+
+
 
     .hidden-xs {
         display: none;
