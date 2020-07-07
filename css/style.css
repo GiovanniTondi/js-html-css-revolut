@@ -253,6 +253,7 @@ footer .appDownload {
     width: 100%;
     background-color: #fff;
     z-index: 99;
+    box-shadow: 0 0 10px 1px #f0e6e6;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -280,6 +281,10 @@ input[type=number] {
     .jumbo .landing .form,
     .jumbo .landing .landing-footer {
         display: none;
+    }
+
+    .container {
+        padding: 0 calc(1% + 20px);
     }
 
     header > div {
@@ -321,51 +326,6 @@ input[type=number] {
     }
 
     /* hamburger menu*/
-    .menu-xs.active {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-top: 100px;
-        width: 100%;
-        height: calc(100vh - 300px);
-        background-color: #fff;
-        z-index: 98;
-    }
-
-    .menu-xs .close {
-        position: absolute;
-        top: -70px;
-        right: 60px;
-        font-size: 28px;
-        z-index: 99;
-    }
-
-    .menu-xs .parent-dropdown {
-        list-style: none;
-    }
-
-    .menu-xs .parent-dropdown a {
-        display: inline-block;
-        font-size: 20px;
-    }
-
-    .menu-xs .dropdown {
-        display: none;
-        position: relative;
-        top: -21px;
-        left: -7px;
-        padding: 20px 0;
-        background-color: #fff;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .menu-xs .dropdown a {
-        font-size: 16px;
-    }
-
-    /* test */
     nav .inline-menu.active {
         flex-direction: column;
         display: block;
@@ -374,20 +334,24 @@ input[type=number] {
         left: 0;
         margin-top: 100px;
         width: 100%;
-        height: calc(100vh - 300px);
+        height: calc(100vh - 170px);
         background-color: #fff;
-        overflow: hidden;
+        overflow: auto;
         z-index: 98;
     }
 
     .inline-menu.active .parent-dropdown {
-        margin-left: 60px;
+        /* padding-left: 20px; */
     }
 
     .inline-menu.active .parent-dropdown a {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px calc(1% + 30px);
+        width: 98%;
         font-size: 20px;
     }
+
 
     .inline-menu.active .dropdown {
         display: none;
