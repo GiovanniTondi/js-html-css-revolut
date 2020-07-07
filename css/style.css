@@ -71,7 +71,8 @@ a:hover {
     display: none;
     margin-left: auto;
     position: absolute;
-    top: 32px;
+    padding: 5px;
+    top: 25px;
     right: 50px;
     font-size: 22px;
 }
@@ -173,7 +174,7 @@ main .logo {
 
 .jumbo {
     display: flex;
-    margin-top: 70px;
+    margin: 70px 0;
     width: 100%;
 }
 

@@ -10,7 +10,8 @@ $(document).ready(function () {
     $('.parent-dropdown').mouseleave(function () {
         if ($('.inline-menu.active').css('flex-direction') != 'column') {
             $(this).children('div').hide();
-            $('.parent-dropdown').removeClass('active');
+            $('.parent-dropdown a').removeClass('active');
+            $('.parent-dropdown .fas').removeClass('rotate180');
         }
     });
 
