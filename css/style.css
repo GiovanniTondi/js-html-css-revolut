@@ -77,8 +77,9 @@ a:hover {
     font-size: 22px;
 }
 
-.hamburger .fa-times {
+.hamburger .fas {
     font-size: 28px;
+    transition: all .3s ease 0s;
 }
 
 .menu-xs {
@@ -365,9 +366,13 @@ input[type=number] {
         font-size: 16px;
     }
 
+    .parent-dropdown sup {
+        margin-right: auto;
+    }
+
     .parent-dropdown .fa-chevron-down {
         display: block;
-        transition: all .4s linear 0s;
+        transition: all .4s ease 0s;
     }
 
     .rotate180 {

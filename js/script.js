@@ -36,7 +36,7 @@ $(document).ready(function () {
 
 
     $('.hamburger').click(function () {
-        $('.hamburger .fas').toggleClass('fa-bars fa-times');
+        $('.hamburger .fas').toggleClass('fa-bars fa-times rotate180');
 
         $('.jumbo').toggleClass('hidden-xs');
         $('.logo').toggleClass('hidden-xs');
